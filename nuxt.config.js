@@ -58,3 +58,12 @@ export default {
     }
   }
 }
+
+module.exports = {
+  modules: ['@nuxtjs/style-resources'],
+  styleResources: {
+   scss: [
+    '~/assets/scss/common.scss'
+    ]
+  }
+}
