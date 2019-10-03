@@ -46,7 +46,14 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources',
   ],
+  styleResources: {
+    scss: [
+      //全vueで読み込みたいscssはここで読み込む
+      '~/assets/scss/app.scss',
+    ],
+  },
   /*
   ** Build configuration
   */
@@ -56,14 +63,5 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
-}
-
-module.exports = {
-  modules: ['@nuxtjs/style-resources'],
-  styleResources: {
-   scss: [
-    '~/assets/scss/common.scss'
-    ]
   }
 }
