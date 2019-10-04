@@ -9,7 +9,7 @@
 
 <style scoped lang="scss">
 .test{
-	background-color:$color_black;
+	background-color:$color_white;
 }
 </style>
 
