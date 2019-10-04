@@ -1,20 +1,30 @@
 <template>
-  <div class="test">
-      aaaa
-  </div>
+	<div>
+		<MenuBar class="z_index_1"></MenuBar>
+		<Canvas class="z_index_0"></Canvas>
+	</div>
 </template>
 
 <script>
-	export default {
-        name: "index",
-        props: {
-        },
-    };
+import MenuBar from "./component/Menu/MenuBar.vue"
+import Canvas from "./component/Top/Canvas.vue"
+export default {
+    name: "index",
+    components: {
+    	MenuBar,
+    	Canvas,
+    },
+    props: {
+    },
+};
 </script>
 
 <style scoped lang="scss">
-.test{
-	background-color:$color_white;
+.z_index_0{
+	z-index:0;
+}
+.z_index_1{
+	z-index:1;
 }
 </style>
 
