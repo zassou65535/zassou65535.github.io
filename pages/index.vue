@@ -5,6 +5,11 @@
 </template>
 
 <script>
+	export default {
+        name: "index",
+        props: {
+        },
+    };
 </script>
 
 <style scoped lang="scss">
