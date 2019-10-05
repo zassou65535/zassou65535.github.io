@@ -1,9 +1,9 @@
 <template>
     <div class="menubar_entity">
         <input id="menu_checkbox" type="checkbox" value="off">
-        <ul class="navigation">
-            <li class="navigation__link"><a href="#about">ABOUT</a></li>
-            <li class="navigation__link"><a href="#creator">WORKS</a></li>
+        <ul class="navigation_sp">
+            <li><p>ABOUT</p><a href="#about"></a></li>
+            <li><p>WORKS</p><a href="#creator"></a></li>
         </ul>
         <div class="touch_prevention"></div>
         <a href="/" class="top_link">
@@ -18,6 +18,10 @@
             </div>
             <p>MENU</p>
         </label>
+        <ul class="navigation_pc">
+            <li><p>ABOUT</p><a href="#about"></a></li>
+            <li><p>WORKS</p><a href="#creator"></a></li>
+        </ul>
     </div>
 </template>
 
@@ -66,114 +70,172 @@
         }
     }
 
-    ul.navigation{
-        position:fixed;
-        top:0px;
-        left:0px;
-        width:100%;
-        height:100%;
-        padding-top:20%;
-        padding-left:10%;
-        background-color:$color_white;
-        opacity:0;
-        transition:all 0.2s ease;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;/*水平方向*/
-        align-items:flex-start;/*垂直方向*/
-        li{
+    @media screen and (min-width: 681px){
+        ul.navigation_sp{display:none;}
+        .touch_prevention{ display:none; }
+        .hamburger{ display:none; }
+        .navigation_pc{
+            display:inline;
             position:relative;
-            list-style: none;
-            margin-top:40px;
-            a{
-                text-decoration:none;
-                font-size:30px;
-                color:$color_black;
+            width:60%;
+            height:100%;
+            background-color: rgba(100,100,100,0);
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;/*水平方向*/
+            align-items:center;/*垂直方向*/
+            li{
+                position:relative;
+                list-style: none;
+                margin-left:20px;
+                transition:all 0.2s ease;
+                background-color:rgba(0,0,0,0);
+                a{
+                    text-decoration:none;
+                    background-color:rgba(0,0,0,0);
+                    position:absolute;
+                    top:0px;
+                    left:0px;
+                    width:100%;
+                    height:100%;
+                }
+                p{
+                    font-size:20px;
+                    color:$color_white;
+                    padding-left:5px;
+                    padding-right:5px;
+                }
             }
         }
     }
 
-    .touch_prevention{
-        position:fixed;
-        width:100%;
-        height:100%;
-        top:0px;
-        left:0px;
-        opacity:0;
-        display:inline;
-    }
+    @media screen and (max-width: 680px){
+        ul.navigation_sp{
+            display:inline;
+            position:fixed;
+            top:0px;
+            left:0px;
+            width:100%;
+            height:100%;
+            padding-top:20%;
+            padding-left:10%;
+            background-color:$color_white;
+            opacity:0;
+            transition:all 0.2s ease;
 
-    .hamburger{
-        position: relative;
-        width:65px;
-        height:65px;
-        background:rgba(100,200,0,0);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;/*水平方向*/
+            align-items:flex-start;/*垂直方向*/
+            li{
+                position:relative;
+                list-style: none;
+                margin-top:70px;
+                transition:all 0.2s ease;
+                a{
+                    text-decoration:none;
+                    background-color:rgba(0,0,0,0);
+                    position:absolute;
+                    top:0px;
+                    left:0px;
+                    width:100%;
+                    height:100%;
+                }
+                p{
+                    font-size:30px;
+                    color:$color_black;
+                }
+            }
+        }
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;/*水平方向*/
-        align-items:center;/*垂直方向*/
-        .bars{
+        .touch_prevention{
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0px;
+            left:0px;
+            opacity:0;
+            display:inline;
+        }
+
+        .hamburger{
+            display:inline;
             position: relative;
-            width:50px;
-            height:auto;
-            margin-top:20%;
-            margin-bottom:1%;
+            width:65px;
+            height:65px;
+            background:rgba(100,200,0,0);
 
             display: flex;
             flex-direction: column;
             justify-content: center;/*水平方向*/
             align-items:center;/*垂直方向*/
-            span{
+            .bars{
                 position: relative;
-                width:100%;
-                height:2px;
-                background-color: $color_white;
-                border-radius:2px;
-                transition:all 0.2s ease;
-                transform:rotateZ(0deg);
-            }
-            .bar_middle{
-                margin-top:15px;
-                margin-bottom:15px;
-            }
-        }
-        p{
-            width:90%;
-            font-size:15px;
-            text-align: center;
-            color: $color_white;
-            letter-spacing:4px;
-        }
-    }
+                width:50px;
+                height:auto;
+                margin-top:20%;
+                margin-bottom:1%;
 
-    #menu_checkbox:checked ~ .top_link{
-        color:$color_black;
-    }
-    #menu_checkbox:checked ~ ul.navigation{
-        opacity:1;
-    }
-    #menu_checkbox:checked ~ .touch_prevention{
-        display:none;
-    }
-    #menu_checkbox:checked ~ .hamburger{
-        .bars{
-            span{
-                background-color: $color_black;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;/*水平方向*/
+                align-items:center;/*垂直方向*/
+                span{
+                    position: relative;
+                    width:100%;
+                    height:2px;
+                    background-color: $color_white;
+                    border-radius:2px;
+                    transition:all 0.2s ease;
+                    transform:rotateZ(0deg);
+                }
+                .bar_middle{
+                    margin-top:15px;
+                    margin-bottom:15px;
+                }
             }
-            .bar_top{
-                transform:translateY(17px) rotateZ(135deg);
-            }
-            .bar_middle{
-                transform:rotateZ(45deg);
-            }
-            .bar_bottom{
-                transform:translateY(-17px) rotateZ(225deg);
+            p{
+                width:90%;
+                font-size:15px;
+                text-align: center;
+                color: $color_white;
+                letter-spacing:4px;
             }
         }
-        p{
-            color: $color_black;
+
+        .navigation_pc{display:none;}
+
+        #menu_checkbox:checked ~ .top_link{
+            color:$color_black;
+        }
+        #menu_checkbox:checked ~ ul.navigation_sp{
+            opacity:1;
+            li{
+                margin-top:40px;
+            }
+        }
+        #menu_checkbox:checked ~ .touch_prevention{
+            display:none;
+        }
+        #menu_checkbox:checked ~ .hamburger{
+            .bars{
+                span{
+                    background-color: $color_black;
+                }
+                .bar_top{
+                    transform:translateY(17px) rotateZ(135deg);
+                }
+                .bar_middle{
+                    transform:rotateZ(45deg);
+                }
+                .bar_bottom{
+                    transform:translateY(-17px) rotateZ(225deg);
+                }
+            }
+            p{
+                color: $color_black;
+            }
         }
     }
 }
