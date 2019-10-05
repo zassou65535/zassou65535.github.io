@@ -10,6 +10,22 @@
         name: "Canvas",
         props: {
         },
+        data:function(){
+            return{
+                isLoaded:false,
+                hue:100,
+                back_element:null,
+                fore_element:null,
+                back_context:null,
+                fore_context:null,
+                twoPI:Math.PI*2,
+                parts:null,
+                size_base:0,
+                content_width:0,
+                content_height:0,
+                counter:0,
+            };
+        },
         created:function(){//on load
             this.DrawBackGround();
         },
@@ -18,17 +34,54 @@
                 if (!process.client) {
                   return;
                 }
-                var back_canv = document.querySelector("#back_canvas");
-                var context = back_canv.getContext("2d");
-                this.DrawCircle(context,100,100,10);
-                context.stroke();
+                this.back_element = document.querySelector("#back_canvas");
+                this.fore_element = document.querySelector("#fore_canvas");
+                this.content_width = this.back_element.width = this.fore_element.width = window.innerWidth;
+                this.content_height = this.back_element.height = this.fore_element.height = window.innerHeight;
+                this.size_base = this.content_width + this.content_height;
+                this.counter = Math.floor(this.size_base*0.3);
+                this.back_context = this.back_element.getContext("2d");
+                this.fore_context = this.fore_element.getContext("2d");
+                this.hue = this.Rand(0,360);
+                var opt = {
+                    radiusMin:1,
+                    radiusMax:this.size_base*0.04,
+                    blurMin:10,
+                    blurMax:this.size_base*0.04,
+                    hueMin:this.hue,
+                    hueMax:this.hue+100,
+                    saturationMin:10,
+                    saturationMax:70,
+                    lightnessMin:20,
+                    lightnessMax:50,
+                    alphaMin:0.1,
+                    alphaMax:0.5
+                }
+                this.back_context.clearRect(0,0,this.content_width,this.content_height);
+                this.back_context.globalCompositeOperation = "lighter";//図形が重なった時の合成方法を指定
+                while(this.counter--){
+                    var radius = this.Rand(opt.radiusMin,opt.radiusMax);
+                    var blur = this.Rand(opt.blurMin,opt.blurMax);
+                    var x = this.Rand(0,this.content_width);
+                    var y = this.Rand(0,this.content_height);
+                    var hue = this.Rand(opt.hueMin,opt.hueMax);
+                    var saturation = this.Rand(opt.saturationMin,opt.saturationMax);
+                    var lightness = this.Rand(opt.lightnessMin,opt.lightnessMax);
+                    var alpha = this.Rand(opt.alphaMin,opt.alphaMax);
+
+                    this.back_context.shadowColor = this.GenerateHSLA(hue,saturation,lightness,alpha);
+                    this.back_context.shadowBlur = blur;
+                    this.back_context.beginPath();
+                    this.back_context.arc(x,y,radius,0,this.twoPI);
+                    this.back_context.closePath();
+                    this.back_context.fill();
+                }
             },
-            DrawCircle:function(context,x,y,radius){
-                context.beginPath();//path reset
-                context.arc(x,y,radius,0,2*Math.PI,false);
-                context.fillstyle = "rgba(255,0,0,1)"
-                context.fill();
-                context.linewidth = 0;
+            Rand:function(min,max){
+                return Math.random()*(max-min)+min
+            },
+            GenerateHSLA:function(h,s,l,a){
+                return 'hsla(' + h + ',' + s + '%,' + l + '%,' + a + ')';
             },
         }
     };
