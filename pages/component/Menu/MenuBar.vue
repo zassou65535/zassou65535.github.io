@@ -86,11 +86,17 @@
             justify-content: flex-end;/*水平方向*/
             align-items:center;/*垂直方向*/
             li{
+                width:100px;
+                height:45px;
                 position:relative;
                 list-style: none;
                 margin-left:20px;
                 transition:all 0.2s ease;
-                background-color:rgba(0,0,0,0);
+                background-color:rgba(0,0,200,0);
+
+                display: flex;
+                justify-content: center;/*水平方向*/
+                align-items:center;/*垂直方向*/
                 a{
                     text-decoration:none;
                     background-color:rgba(0,0,0,0);
@@ -99,12 +105,72 @@
                     left:0px;
                     width:100%;
                     height:100%;
+
+                    &::before{/*右*/
+                        content:"";
+                        position:absolute;
+                        width:1px;
+                        height:0%;
+                        right:0px;
+                        bottom:0px;
+                        background:$color_white;
+                        transition:all 0.2s ease;
+                    }
+                    &::after{/*下*/
+                        content:"";
+                        position:absolute;
+                        width:0%;
+                        height:1px;
+                        right:0px;
+                        bottom:0px;
+                        background:$color_white;
+                        transition:all 0.2s ease;
+                    }
                 }
                 p{
-                    font-size:20px;
+                    font-size:15px;
                     color:$color_white;
                     padding-left:5px;
                     padding-right:5px;
+
+                    &::before{/*左*/
+                        content:"";
+                        position:absolute;
+                        width:1px;
+                        height:0%;
+                        left:0px;
+                        top:0px;
+                        background:$color_white;
+                        transition:all 0.2s ease;
+                    }
+                    &::after{/*上*/
+                        content:"";
+                        position:absolute;
+                        width:0%;
+                        height:1px;
+                        left:0px;
+                        top:0px;
+                        background:$color_white;
+                        transition:all 0.2s ease;
+                    }
+                }
+                &:hover{
+                    a{
+                        &::before{/*右*/
+                            height:100%;
+                        }
+                        &::after{/*下*/
+                            width:100%;
+                        }
+                    }
+                    p{
+                        &::before{/*左*/
+                            height:100%;
+                        }
+                        &::after{/*上*/
+                            width:100%;
+                        }
+                    }
                 }
             }
         }
