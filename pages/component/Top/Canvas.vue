@@ -27,9 +27,23 @@
             };
         },
         created:function(){//on load
+            if (!process.client) {
+              return;
+            }
             this.DrawBackGround();
+            window.addEventListener('resize',this.RisizeEvent,false);
+        },
+        beforeDestroy: function () {
+            if (!process.client) {
+              return;
+            }
+            // インスタンスを破棄する前に、イベントリスナから削除
+            window.removeEventListener('resize',this.RisizeEvent,false);
         },
         methods:{
+            RisizeEvent:function(){
+                this.DrawBackGround();
+            },
             DrawBackGround:function(){
                 if (!process.client) {
                   return;
@@ -42,7 +56,6 @@
                 this.counter = Math.floor(this.size_base*0.3);
                 this.back_context = this.back_element.getContext("2d");
                 this.fore_context = this.fore_element.getContext("2d");
-                this.hue = this.Rand(0,360);
                 var opt = {
                     radiusMin:1,
                     radiusMax:this.size_base*0.04,
