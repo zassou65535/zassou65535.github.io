@@ -5,6 +5,23 @@
     </div>
 </template>
 
+<style scoped lang="scss">
+.canvas_wrapper{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background:$color_black;
+}
+#back_canvas{
+    display:none;
+}
+#fore_canvas{
+    background: $color_black;
+}
+</style>
+
 <script>
     export default {
         name: "Canvas",
@@ -31,6 +48,7 @@
               return;
             }
             this.DrawBackGround();
+            this.Update();
             window.addEventListener('resize',this.RisizeEvent,false);
         },
         beforeDestroy: function () {
@@ -89,6 +107,48 @@
                     this.back_context.closePath();
                     this.back_context.fill();
                 }
+
+                this.parts = [];
+                for(var i=0;i<Math.floor((this.content_width+this.content_height)*0.03);i++){
+                    this.parts.push({
+                        radius:this.Rand(1,this.size_base*0.03),
+                        x:this.Rand(0,this.content_width),
+                        y:this.Rand(0,this.content_height),
+                        angle:this.Rand(0,this.twoPI),
+                        speed:this.Rand(0.1,0.5),
+                        tick:this.Rand(0,10000),
+                    });
+                }
+            },
+            Update:function(){//毎フレームごとの処理
+                requestAnimationFrame(this.Update);
+
+                this.fore_context.clearRect(0,0,this.content_width,this.content_height);
+                this.fore_context.globalCompositeOperation = 'source-over';
+                this.fore_context.shadowBlur = 0;
+                this.fore_context.drawImage(this.back_element,0,0);
+                this.fore_context.globalCompositeOperation = 'lighter';
+
+                var i = this.parts.length;
+                this.fore_context.shadowBlur = 15;
+                this.fore_context.shadowColor = '#FFFFFF';
+                while(i--){
+                    this.parts[i].x+=Math.cos(this.parts[i].angle)*this.parts[i].speed;
+                    this.parts[i].y+=Math.sin(this.parts[i].angle)*this.parts[i].speed;
+                    this.parts[i].angle+=this.Rand(-0.05,0.05);
+
+                    this.fore_context.beginPath();
+                    this.fore_context.arc(this.parts[i].x,this.parts[i].y,this.parts[i].radius,0,this.twoPI);
+                    this.fore_context.fillStyle = this.GenerateHSLA(0,0,100,0.075+Math.cos(this.parts[i].tick*0.02)*0.05);
+                    this.fore_context.fill();
+
+                    if(this.parts[i].x-this.parts[i].radius > this.content_width) { this.parts[i].x = -this.parts[i].radius }
+                    if(this.parts[i].x+this.parts[i].radius < 0)  { this.parts[i].x = this.content_width + this.parts[i].radius }
+                    if(this.parts[i].y-this.parts[i].radius > this.content_height) { this.parts[i].y = -this.parts[i].radius }
+                    if(this.parts[i].y+this.parts[i].radius < 0)  { this.parts[i].y = this.content_height + this.parts[i].radius }
+
+                    this.parts[i].tick++;
+                }
             },
             Rand:function(min,max){
                 return Math.random()*(max-min)+min
@@ -99,14 +159,3 @@
         }
     };
 </script>
-
-<style scoped lang="scss">
-.canvas_wrapper{
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    background:$color_black;
-}
-</style>
