@@ -40,7 +40,7 @@
     height:80px;
     top:0px;
     left:0px;
-    background:rgba(200,200,0,0);
+    background:rgba(0,0,0,0.5);
     padding-left:7%;
     padding-right:7%;
 
