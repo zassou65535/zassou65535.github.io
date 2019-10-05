@@ -231,6 +231,7 @@
             width:65px;
             height:65px;
             background:rgba(100,200,0,0);
+            cursor: pointer;
 
             display: flex;
             flex-direction: column;
