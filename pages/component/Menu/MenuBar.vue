@@ -1,18 +1,15 @@
 <template>
     <div class="menubar_entity">
+        <input id="menu_checkbox" type="checkbox" value="off">
+        <ul class="navigation">
+            <li class="navigation__link"><a href="#about">ABOUT</a></li>
+            <li class="navigation__link"><a href="#creator">WORKS</a></li>
+        </ul>
+        <div class="touch_prevention"></div>
         <a href="/" class="top_link">
             <p>zassou's</p>
             <p>atelier</p>
         </a>
-        <input id="menu_checkbox" type="checkbox" value="off"><!--メニューの開閉に使うチェックボックス display:noneで隠しておく-->
-        <!--ul class="navigation">
-            <li class="navigation__link"><a href="#about">ABOUT</a></li>
-            <li class="navigation__link"><a href="#use">USE</a></li>
-            <li class="navigation__link"><a href="#creator">CREATOR</a></li>
-            <li class="navigation__link"><a href="#goods">GOODS</a></li>
-            <li class="navigation__link"><a href="#festival">FESTIVAL</a></li>
-            <li class="navigation__link"><a href="#contact">CONTACT</a></li>
-        </ul>-->
         <label class="hamburger" for="menu_checkbox">
             <div class="bars">
                 <span class="bar_top"></span>
@@ -39,7 +36,7 @@
     height:80px;
     top:0px;
     left:0px;
-    background:rgba(200,200,0,0.5);
+    background:rgba(200,200,0,0);
     padding-left:7%;
     padding-right:7%;
 
@@ -47,6 +44,9 @@
     flex-direction: row;
     justify-content: space-between;/*水平方向*/
     align-items:center;/*垂直方向*/
+    #menu_checkbox{
+        display:none;
+    }
     .top_link{
         position: relative;
         height:auto;
@@ -54,6 +54,7 @@
         background:rgba(100,200,0,0);
         text-decoration: none;
         color:$color_white;
+        transition:all 0.2s ease;
 
         display: flex;
         flex-direction: column;
@@ -65,15 +66,49 @@
         }
     }
 
-    #menu_checkbox{
-        display:none;
+    ul.navigation{
+        position:fixed;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        padding-top:20%;
+        padding-left:10%;
+        background-color:$color_white;
+        opacity:0;
+        transition:all 0.2s ease;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;/*水平方向*/
+        align-items:flex-start;/*垂直方向*/
+        li{
+            position:relative;
+            list-style: none;
+            margin-top:40px;
+            a{
+                text-decoration:none;
+                font-size:30px;
+                color:$color_black;
+            }
+        }
+    }
+
+    .touch_prevention{
+        position:fixed;
+        width:100%;
+        height:100%;
+        top:0px;
+        left:0px;
+        opacity:0;
+        display:inline;
     }
 
     .hamburger{
         position: relative;
         width:65px;
         height:65px;
-        background:rgba(100,200,0,0.5);
+        background:rgba(100,200,0,0);
 
         display: flex;
         flex-direction: column;
@@ -83,7 +118,7 @@
             position: relative;
             width:50px;
             height:auto;
-            margin-top:10%;
+            margin-top:20%;
             margin-bottom:1%;
 
             display: flex;
@@ -96,10 +131,12 @@
                 height:2px;
                 background-color: $color_white;
                 border-radius:2px;
+                transition:all 0.2s ease;
+                transform:rotateZ(0deg);
             }
             .bar_middle{
-                margin-top:30%;
-                margin-bottom:30%;
+                margin-top:15px;
+                margin-bottom:15px;
             }
         }
         p{
@@ -107,6 +144,36 @@
             font-size:15px;
             text-align: center;
             color: $color_white;
+            letter-spacing:4px;
+        }
+    }
+
+    #menu_checkbox:checked ~ .top_link{
+        color:$color_black;
+    }
+    #menu_checkbox:checked ~ ul.navigation{
+        opacity:1;
+    }
+    #menu_checkbox:checked ~ .touch_prevention{
+        display:none;
+    }
+    #menu_checkbox:checked ~ .hamburger{
+        .bars{
+            span{
+                background-color: $color_black;
+            }
+            .bar_top{
+                transform:translateY(17px) rotateZ(135deg);
+            }
+            .bar_middle{
+                transform:rotateZ(45deg);
+            }
+            .bar_bottom{
+                transform:translateY(-17px) rotateZ(225deg);
+            }
+        }
+        p{
+            color: $color_black;
         }
     }
 }
