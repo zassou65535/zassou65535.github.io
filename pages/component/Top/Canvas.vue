@@ -68,6 +68,7 @@
                 }
                 this.back_element = document.querySelector("#back_canvas");
                 this.fore_element = document.querySelector("#fore_canvas");
+                if(this.back_element==null || this.fore_element==null) return;
                 this.content_width = this.back_element.width = this.fore_element.width = window.innerWidth;
                 this.content_height = this.back_element.height = this.fore_element.height = window.innerHeight;
                 this.size_base = this.content_width + this.content_height;
@@ -121,6 +122,7 @@
                 }
             },
             Update:function(){//毎フレームごとの処理
+                if(this.back_element==null || this.fore_element==null) return;
                 requestAnimationFrame(this.Update);
 
                 this.fore_context.clearRect(0,0,this.content_width,this.content_height);

@@ -2,8 +2,8 @@
     <div class="menubar_entity">
         <input id="menu_checkbox" type="checkbox" value="off">
         <ul class="navigation_sp">
-            <li><p>ABOUT</p><a href="#about"></a></li>
-            <li><p>WORKS</p><a href="#creator"></a></li>
+            <li><p>ABOUT</p><router-link to="/about"></router-link></li>
+            <li><p>WORKS</p><router-link to="/works"></router-link></li>
         </ul>
         <div class="touch_prevention"></div>
         <a href="/" class="top_link">
@@ -24,8 +24,8 @@
             </p>
         </label>
         <ul class="navigation_pc">
-            <li><p>ABOUT</p><a href="#about"></a></li>
-            <li><p>WORKS</p><a href="#creator"></a></li>
+            <li><p>ABOUT</p><router-link to="/about"></router-link></li>
+            <li><p>WORKS</p><router-link to="/works"></router-link></li>
         </ul>
     </div>
 </template>
