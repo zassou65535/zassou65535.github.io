@@ -3,6 +3,7 @@
         <div class="bigline">
             <MovingTitle v-bind:titleStrings="['zassou\'s','atelier']"></MovingTitle>
         </div>
+        <p class="subline">- Collection of works -</p>
     </div>
 </template>
 
@@ -20,6 +21,20 @@
         width:100%;
         height:auto;
     }
+    .subline{
+        position: absolute;
+        width:100%;
+        height:auto;
+        font-size:27px;
+        background-color:rgba(0,0,0,0);
+        color:$color_white;
+
+        display: flex;
+        flex-direction:row;
+        justify-content: center;/*水平方向*/
+        align-items:center center;/*垂直方向*/
+    }
+
 }
 </style>
 

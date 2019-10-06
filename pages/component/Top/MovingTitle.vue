@@ -11,7 +11,7 @@
     position:relative;
     width:100%;
     height:auto;
-    background-color:rgba(0,0,0,0.5);
+    background-color:rgba(0,0,0,0);
     color:$color_white;
 
     display: flex;
@@ -26,7 +26,7 @@
 
         display: flex;
         flex-direction:row;
-        justify-content: flex-start;/*水平方向*/
+        justify-content: center;/*水平方向*/
         align-items:center center;/*垂直方向*/
         .each_character{
             position:relative;

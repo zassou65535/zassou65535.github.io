@@ -84,7 +84,7 @@
                     saturationMin:10,
                     saturationMax:70,
                     lightnessMin:20,
-                    lightnessMax:50,
+                    lightnessMax:30,
                     alphaMin:0.1,
                     alphaMax:0.5
                 }
