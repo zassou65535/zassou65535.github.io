@@ -129,8 +129,6 @@
                 requestAnimationFrame(this.Update);
 
                 if(this.back_element==null || this.fore_element==null){
-                    this.back_element = document.querySelector("#back_canvas");
-                    this.fore_element = document.querySelector("#fore_canvas");
                     this.DrawBackGround();
                     return;
                 }
