@@ -16,7 +16,12 @@
                 <span class="bar_middle"></span>
                 <span class="bar_bottom"></span>
             </div>
-            <p>MENU</p>
+            <p>
+                <span>M</span>
+                <span>E</span>
+                <span>N</span>
+                <span>U</span>
+            </p>
         </label>
         <ul class="navigation_pc">
             <li><p>ABOUT</p><a href="#about"></a></li>
@@ -263,11 +268,13 @@
                 }
             }
             p{
-                width:90%;
+                display: flex;
+                justify-content: space-between;/*水平方向*/
+                align-items:center;/*垂直方向*/
+
+                width:85%;
                 font-size:15px;
-                text-align: center;
                 color: $color_white;
-                letter-spacing:4px;
             }
         }
 
