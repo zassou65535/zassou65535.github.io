@@ -1,24 +1,27 @@
 <template>
     <div class="wrapper">
-        <slot></slot>
+        <p>
+            <slot></slot>
+        </p>
     </div>
 </template>
 
 <style scoped lang="scss">
 .wrapper{
     position:absolute;
-    width:auto;
-    height:auto;
-    top:calc(50% - 40px);
-    left:50%;
-    color:$color_white;
-    font-size:70px;
-    transform:translateX(-50%) translateY(-50%);
-
-    display: flex;
-    flex-direction:column;
-    justify-content: center;/*水平方向*/
-    align-items:flex-start;/*垂直方向*/
+    width:100%;
+    height:calc(75% - 80px);
+    top:80px;
+    p{
+        position:absolute;
+        width:auto;
+        height:auto;
+        top:50%;
+        left:47%;
+        font-size:70px;
+        color:$color_white;
+        transform:translateX(-50%) translateY(-50%);
+    }
 }
 </style>
 
