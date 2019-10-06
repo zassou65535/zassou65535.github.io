@@ -1,12 +1,16 @@
 <template>
     <div class="movingtitle_wrapper">
         <div class="line" v-for="string in titleStrings">
-            <div class="each_character" v-for="character in string">{{character}}</div>
+            <div v-bind:class="'each_character emerge_char'+(GetAndIncrementCharCounter)" v-for="character in string">{{character}}</div>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
+$max_characters:20; //最大文字数
+$emerge_duration:0.35s; //文字の出現にかかる時間
+$wait_duration:-0.3s; //ある文字が出現してから、次の文字の出現にかかる時間
+
 .movingtitle_wrapper{
     position:relative;
     width:100%;
@@ -31,7 +35,22 @@
         .each_character{
             position:relative;
             font-size:80px;
+            opacity:0;
         }
+    }
+}
+
+@keyframes emerge_char_base{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@for $i from 0 through $max_characters{
+    .emerge_char#{$i}{
+        animation-name:emerge_char_base;
+        animation-duration:$emerge_duration;
+        animation-timing-function:ease;
+        animation-delay:($emerge_duration+$wait_duration)*$i;
+        animation-fill-mode:forwards;
     }
 }
 </style>
@@ -44,6 +63,7 @@
         },
         data:function(){
             return{
+                char_counter:0,
             };
         },
         created:function(){//on load
@@ -52,6 +72,11 @@
             }
         },
         methods:{
-        }
+        },
+        computed:{
+            GetAndIncrementCharCounter:function(){
+                return ++this.char_counter;
+            },
+        },
     };
 </script>

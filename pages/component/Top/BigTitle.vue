@@ -1,40 +1,91 @@
 <template>
-    <div class="bigtitle_wrapper">
-        <div class="bigline">
-            <MovingTitle v-bind:titleStrings="['zassou\'s','atelier']"></MovingTitle>
+    <div class="entire_wrapper">
+        <div class="background_black"></div>
+        <div class="bigtitle_wrapper">
+            <div class="bigline">
+                <MovingTitle v-bind:titleStrings="['zassou\'s','atelier']"></MovingTitle>
+            </div>
+            <p class="subline">- Collection of works -</p>
         </div>
-        <p class="subline">- Collection of works -</p>
     </div>
 </template>
 
 <style scoped lang="scss">
-.bigtitle_wrapper{
+$wait_background_clear:1.2s;//ページが表示されてから、背景を透過し始めるまでの時間
+$duration_background_clear:0.3s;//背景を透過するのにかける時間
+$wait_subtitle_emerge:0.3s;//背景が透過し終わってから、副題を表示し始めるまでの時間
+
+.entire_wrapper{
     position:absolute;
-    width:auto;
-    height:auto;
-    top:50%;
-    left:50%;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
     background-color:rgba(0,0,0,0);
-    transform:translateX(-50%) translateY(-50%);
-    .bigline{
-        position:rerative;
+    .background_black{
+        position:absolute;
         width:100%;
-        height:auto;
+        height:100%;
+        top:0px;
+        left:0px;
+        background-color:rgba(0,0,0,1);
+
+        animation-name:background_black_fadeout;
+        animation-duration:$duration_background_clear;
+        animation-timing-function:ease;
+        animation-delay:$wait_background_clear;
+        animation-fill-mode:forwards;
     }
-    .subline{
-        position: absolute;
-        width:100%;
+    @keyframes background_black_fadeout{
+        0%{opacity:1;}
+        100%{opacity:0;}
+    }
+    .bigtitle_wrapper{
+        position:absolute;
+        width:auto;
         height:auto;
-        font-size:27px;
+        top:50%;
+        left:50%;
         background-color:rgba(0,0,0,0);
-        color:$color_white;
+        transform:translateX(-50%) translateY(-50%);
+        .background_black{
+            position:fixed;
+            top:0px;
+            left:0px;
+            width:100%;
+            height:100%;
+            background-color:rgba(0,0,0,1);
+        }
+        .bigline{
+            position:rerative;
+            width:100%;
+            height:auto;
+        }
+        .subline{
+            position: absolute;
+            width:100%;
+            height:auto;
+            font-size:27px;
+            background-color:rgba(0,0,0,0);
+            color:$color_white;
 
-        display: flex;
-        flex-direction:row;
-        justify-content: center;/*水平方向*/
-        align-items:center center;/*垂直方向*/
+            display: flex;
+            flex-direction:row;
+            justify-content: center;/*水平方向*/
+            align-items:center center;/*垂直方向*/
+
+            opacity:0;
+            animation-name:subline_emerge;
+            animation-duration:$duration_background_clear;
+            animation-timing-function:ease;
+            animation-delay:$wait_background_clear+$wait_subtitle_emerge;
+            animation-fill-mode:forwards;
+        }
+        @keyframes subline_emerge{
+            0%{opacity:0;}
+            100%{opacity:1;}
+        }
     }
-
 }
 </style>
 
