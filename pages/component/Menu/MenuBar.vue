@@ -2,8 +2,9 @@
     <div class="menubar_entity">
         <input id="menu_checkbox" type="checkbox" value="off">
         <ul class="navigation_sp">
-            <li><p>ABOUT</p><router-link to="/about"></router-link></li>
-            <li><p>WORKS</p><router-link to="/works"></router-link></li>
+            <li @click="CloseMenu();"><p>TOP</p><router-link to="/"></router-link></li>
+            <li @click="CloseMenu();"><p>ABOUT</p><router-link to="/about"></router-link></li>
+            <li @click="CloseMenu();"><p>WORKS</p><router-link to="/works"></router-link></li>
         </ul>
         <div class="touch_prevention"></div>
         <a href="/" class="top_link">
@@ -34,6 +35,11 @@
     export default {
         name: "menubar",
         props: {
+        },
+        methods:{
+            CloseMenu:function(){
+                (document.querySelector("#menu_checkbox")).checked = false;
+            }
         },
     };
 </script>
