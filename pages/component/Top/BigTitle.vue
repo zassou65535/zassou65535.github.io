@@ -3,7 +3,7 @@
         <div class="background_black"></div>
         <div class="bigtitle_wrapper">
             <div class="bigline">
-                <MovingTitle v-bind:titleStrings="['zassou\'s','atelier']"></MovingTitle>
+                <MovingTitle v-bind:titleStrings="[['zassou\'s',0],['atelier',8]]"></MovingTitle>
             </div>
             <p class="subline">- Collection of works -</p>
         </div>

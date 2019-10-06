@@ -1,7 +1,11 @@
 <template>
     <div class="movingtitle_wrapper">
-        <div class="line" v-for="string in titleStrings">
-            <div v-bind:class="'each_character emerge_char'+(GetAndIncrementCharCounter)" v-for="character in string">{{character}}</div>
+        <div class="line" v-for="index_line in titleStrings.length">
+            <div 
+             v-bind:class="'each_character emerge_char'+(titleStrings[index_line-1][1]+index_char-1)"
+             v-for="index_char in titleStrings[index_line-1][0].length">
+                {{titleStrings[index_line-1][0][index_char-1]}}
+            </div>
         </div>
     </div>
 </template>
@@ -72,11 +76,6 @@ $wait_duration:-0.3s; //ある文字が出現してから、次の文字の出�
             }
         },
         methods:{
-        },
-        computed:{
-            GetAndIncrementCharCounter:function(){
-                return ++this.char_counter;
-            },
         },
     };
 </script>
