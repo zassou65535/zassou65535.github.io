@@ -13,7 +13,7 @@
     height:auto;
     top:50%;
     left:50%;
-    background-color: $color_white;
+    background-color:rgba(0,0,0,0);
     transform:translateX(-50%) translateY(-50%);
     .bigline{
         position:rerative;

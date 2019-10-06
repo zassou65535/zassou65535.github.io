@@ -64,6 +64,7 @@
         text-decoration: none;
         color:$color_white;
         transition:all 0.2s ease;
+        line-height:1.6rem;
 
         display: flex;
         flex-direction: column;

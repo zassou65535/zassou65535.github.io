@@ -11,6 +11,8 @@
     position:relative;
     width:100%;
     height:auto;
+    background-color:rgba(0,0,0,0.5);
+    color:$color_white;
 
     display: flex;
     flex-direction:column;
@@ -20,6 +22,7 @@
         position:relative;
         width:100%;
         height:auto;
+        line-height:90px;
 
         display: flex;
         flex-direction:row;
@@ -27,7 +30,7 @@
         align-items:center center;/*垂直方向*/
         .each_character{
             position:relative;
-            font-size:60px;
+            font-size:80px;
         }
     }
 }
