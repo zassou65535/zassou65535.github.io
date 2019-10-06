@@ -25,6 +25,7 @@
             </p>
         </label>
         <ul class="navigation_pc">
+            <li><p>Top</p><router-link to="/"></router-link></li>
             <li><p>ABOUT</p><router-link to="/about"></router-link></li>
             <li><p>WORKS</p><router-link to="/works"></router-link></li>
         </ul>
