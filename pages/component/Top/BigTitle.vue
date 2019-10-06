@@ -68,6 +68,7 @@ $wait_subtitle_emerge:0.3s;//背景が透過し終わってから、副題を表
             font-size:27px;
             background-color:rgba(0,0,0,0);
             color:$color_white;
+            margin-top:14px;
 
             display: flex;
             flex-direction:row;
