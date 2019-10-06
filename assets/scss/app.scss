@@ -1,8 +1,10 @@
 /*ここに書いた実装は全ページで読み込まれる*/
+@import "import.css";
 
 *{
 	margin:0;
 	padding:0;
+	font-family:'M PLUS 1p',sans-serif;
 }
 
 $color_black:#000000;
