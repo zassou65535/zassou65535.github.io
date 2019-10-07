@@ -19,7 +19,7 @@
         width:auto;
         height:auto;
         color:$color_gray;
-        font-size:20px;
+        font-size:30px;
     }
     .wrapper_with_title-bar{
         position:relative;
