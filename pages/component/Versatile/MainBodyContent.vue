@@ -1,5 +1,8 @@
 <template>
     <div class="wrapper">
+        <div class="inner">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -7,15 +10,20 @@
 .wrapper{
     position:absolute;
     width:100%;
-    height:100%;
+    height:auto;
     top:75%;
     left:0px;
     background-color:rgba(0,0,0,0.7);
-
-    display: flex;
-    flex-direction:column;
-    justify-content: center;/*水平方向*/
-    align-items:flex-start;/*垂直方向*/
+    .inner{
+        position:relative;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        margin-top:50px;
+        margin-bottom:50px;
+        height:auto;
+        background-color:rgba(0,0,0,0);
+    }
 }
 </style>
 
