@@ -16,11 +16,11 @@
     background-color:rgba(0,0,0,0.7);
     .main_body_inner{
         position:relative;
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
+        width:94%;
+        margin-left:3%;
+        margin-right:3%;
         margin-top:50px;
-        margin-bottom:50px;
+        margin-bottom:120px;
         height:auto;
         background-color:rgba(0,0,0,0);
     }

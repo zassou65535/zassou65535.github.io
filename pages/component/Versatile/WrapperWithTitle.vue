@@ -11,7 +11,8 @@
     width:100%;
     height:auto;
     margin-bottom:20px;
-    display:inline;
+    display:flex;
+    flex-direction:column;
     .wrapper_with_title-title{
         position:relative;
         width:auto;
