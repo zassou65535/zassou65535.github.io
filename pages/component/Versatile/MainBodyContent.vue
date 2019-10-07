@@ -1,20 +1,20 @@
 <template>
-    <div class="wrapper">
-        <div class="inner">
+    <div class="main_body_content">
+        <div class="main_body_inner">
             <slot></slot>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
-.wrapper{
+.main_body_content{
     position:absolute;
     width:100%;
     height:auto;
     top:75%;
     left:0px;
     background-color:rgba(0,0,0,0.7);
-    .inner{
+    .main_body_inner{
         position:relative;
         width:90%;
         margin-left:5%;

@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="pagetitle_wrapper">
         <p>
             <slot></slot>
         </p>
@@ -7,7 +7,7 @@
 </template>
 
 <style scoped lang="scss">
-.wrapper{
+.pagetitle_wrapper{
     position:absolute;
     width:100%;
     height:calc(75% - 80px);
