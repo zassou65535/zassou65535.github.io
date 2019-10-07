@@ -12,12 +12,13 @@
     width:100%;
     height:calc(75% - 80px);
     top:80px;
+    left:0px;
     p{
         position:absolute;
         width:auto;
         height:auto;
         top:50%;
-        left:47%;
+        left:48%;
         font-size:70px;
         color:$color_white;
         transform:translateX(-50%) translateY(-50%);
