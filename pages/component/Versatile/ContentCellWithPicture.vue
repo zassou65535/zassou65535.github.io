@@ -2,7 +2,7 @@
     <div class="content_cell_with_picture">
         <div class="content_cell_with_picture-picture"></div>
         <div class="content_cell_with_picture-title">
-            <p>aaa</p>
+            <slot></slot>
         </div>
     </div>
 </template>
@@ -13,8 +13,8 @@
     width:30%;
     min-width:300px;
     height:auto;
-    margin-bottom:20px;
-    background:$color_gray;
+    margin-bottom:50px;
+    background-color:rgba(0,0,0,0);
 
     display:flex;
     flex-direction:column;
@@ -50,7 +50,8 @@
         align-items:center;/*垂直方向*/
         p{
             color:$color_white;
-            font-size:30px;
+            font-size:25px;
+            text-align: center;
         }
     }
 }
@@ -59,6 +60,11 @@
         width:90%;
         margin-left:0px;
         margin-right:0px;
+        .content_cell_with_picture-title{
+            p{
+                font-size:30px;
+            }
+        }
     }
 }
 @media screen and (min-width: 781px){
@@ -66,6 +72,11 @@
         width:30%;
         margin-left:10px;
         margin-right:10px;
+        .content_cell_with_picture-title{
+            p{
+                font-size:25px;
+            }
+        }
     }
 }
 </style>

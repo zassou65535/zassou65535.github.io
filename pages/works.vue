@@ -7,9 +7,12 @@
                 <template v-slot:content><p></p></template>
             </WrapperWithTitle>
             <div class="works_contents_wrapper">
-                <ContentCellWithPicture/>
-                <ContentCellWithPicture/>
-                <ContentCellWithPicture/>
+                <ContentCellWithPicture>
+                <p>Tokyo Tech Fest 2018</p>
+                <p>Official Site</p>
+                </ContentCellWithPicture>
+                <ContentCellWithPicture></ContentCellWithPicture>
+                <ContentCellWithPicture></ContentCellWithPicture>
             </div>
 		</MainBodyContent>
 	</div>
