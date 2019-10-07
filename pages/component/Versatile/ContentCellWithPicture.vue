@@ -1,6 +1,8 @@
 <template>
     <div class="content_cell_with_picture">
-        <div class="content_cell_with_picture-picture"></div>
+        <div class="content_cell_with_picture-picture">
+            <img :src="image.src" :alt="image.alt"/>
+        </div>
         <div class="content_cell_with_picture-title">
             <slot></slot>
         </div>
@@ -27,12 +29,25 @@
         background:$color_white;
         font-size:30px;
         transition:all 0.15s ease;
+        overflow:hidden;
         &:before{/*この要素のアスペクト比を固定する*/
             content:'';
             display:block;
             width:100%;
             height:0px;
             padding-bottom:59%;
+        }
+        img{
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:100%;
+            height:auto;
+            min-width:100%;
+            min-height:100%;
+            max-width:inherit;
+            background-size:cover;
+            transform:translateX(-50%) translateY(-50%);
         }
     }
     &:hover{
@@ -85,6 +100,7 @@
     export default {
         name: "ContentCellWithPicture",
         props: {
+            image:Object,
         },
     };
 </script>

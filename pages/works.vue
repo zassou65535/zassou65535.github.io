@@ -7,12 +7,14 @@
                 <template v-slot:content><p></p></template>
             </WrapperWithTitle>
             <div class="works_contents_wrapper">
-                <ContentCellWithPicture>
-                <p>Tokyo Tech Fest 2018</p>
-                <p>Official Site</p>
+                <ContentCellWithPicture
+                    v-bind:image="{
+                        src:image_koudaisai,
+                        alt:'Tokyo Tech Fest 2018 Official Site'
+                    }">
+                    <p>Tokyo Tech Fest 2018</p>
+                    <p>Official Site</p>
                 </ContentCellWithPicture>
-                <ContentCellWithPicture></ContentCellWithPicture>
-                <ContentCellWithPicture></ContentCellWithPicture>
             </div>
 		</MainBodyContent>
 	</div>
@@ -23,6 +25,9 @@ import PageTitle from "./component/Versatile/PageTitle.vue"
 import MainBodyContent from "./component/Versatile/MainBodyContent.vue"
 import WrapperWithTitle from "./component/Versatile/WrapperWithTitle.vue"
 import ContentCellWithPicture from "./component/Versatile/ContentCellWithPicture.vue"
+
+import image_koudaisai from '~/assets/img/koudaisai2018.png';
+
 export default {
     name: "works",
     layout:"pageLayout",
@@ -34,6 +39,11 @@ export default {
     },
     props: {
     },
+    data(){
+        return{
+            image_koudaisai:image_koudaisai,
+        }
+    }
 };
 </script>
 
