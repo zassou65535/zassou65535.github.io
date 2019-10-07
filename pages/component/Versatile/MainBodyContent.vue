@@ -16,9 +16,9 @@
     background-color:rgba(0,0,0,0.7);
     .main_body_inner{
         position:relative;
-        width:94%;
-        margin-left:3%;
-        margin-right:3%;
+        width:84%;
+        margin-left:8%;
+        margin-right:8%;
         margin-top:50px;
         margin-bottom:120px;
         height:auto;

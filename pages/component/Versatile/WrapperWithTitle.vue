@@ -1,6 +1,7 @@
 <template>
     <div class="wrapper_with_title">
         <div class="wrapper_with_title-title"><slot name="title"></slot></div>
+        <span class="wrapper_with_title-bar"></span>
         <div class="wrapper_with_title-content"><slot name="content"></slot></div>
     </div>
 </template>
@@ -17,15 +18,19 @@
         position:relative;
         width:auto;
         height:auto;
-        margin-left:30px;
         color:$color_gray;
         font-size:20px;
+    }
+    .wrapper_with_title-bar{
+        position:relative;
+        width:100%;
+        height:1px;
+        background-color:$color_gray;
     }
     .wrapper_with_title-content{
         position:relative;
         width:auto;
         height:auto;
-        margin-left:30px;
         color:$color_white;
         font-size:20px;
     }
