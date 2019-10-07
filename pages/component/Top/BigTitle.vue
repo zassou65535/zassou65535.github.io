@@ -73,7 +73,7 @@ $wait_subtitle_emerge:0.3s;//背景が透過し終わってから、副題を表
             display: flex;
             flex-direction:row;
             justify-content: center;/*水平方向*/
-            align-items:center center;/*垂直方向*/
+            align-items:center;/*垂直方向*/
 
             opacity:0;
             animation-name:subline_emerge;
