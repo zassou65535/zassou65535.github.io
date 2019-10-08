@@ -13,7 +13,7 @@
                         alt:'Tokyo Tech Fest 2018 Official Site'
                     }">
                     <p>Tokyo Tech Fest 2018</p>
-                    <p>Official Site</p>
+                    <p class="p_with_outerlink">Official Site&nbsp;</p>
                 </ContentCellWithPicture>
             </div>
 		</MainBodyContent>

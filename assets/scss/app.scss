@@ -7,6 +7,16 @@
 	font-family:'M PLUS 1p',sans-serif;
 }
 
+.p_with_outerlink{
+	display:flex;
+    align-items:center;/*垂直方向*/
+
+	&:after{
+		content:"open_in_new";
+		font-family: 'Material Icons';
+	}
+}
+
 $color_black:#000000;
 $color_gray:#B5B5B5;
 $color_white:#F5F5F5;
