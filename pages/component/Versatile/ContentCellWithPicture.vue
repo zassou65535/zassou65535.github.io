@@ -8,7 +8,7 @@
         </div>
         <div class="content_cell_with_picture-picture">
             <img :src="image.src" :alt="image.alt"/>
-            <div class="content_cell_with_picture-view_more">
+            <div class="content_cell_with_picture-picture-view_more">
                 <p>VIEW MORE</p>
             </div>
         </div>
@@ -31,7 +31,7 @@
     flex-direction:column;
     justify-content: center;/*水平方向*/
     align-items:center;/*垂直方向*/
-    .content_cell_with_picture-border{
+    &-border{
         position:absolute;
         top:0px;
         left:0px;
@@ -67,8 +67,18 @@
             bottom:0%;
             right:0%;
         }
+        &:after{
+            content:"";
+            position:absolute;
+            bottom:0px;
+            left:0px;
+            width:100%;
+            height:0%;
+            background-color: $color_white;
+            transition:all 0.2s ease;
+        }
     }
-    .content_cell_with_picture-picture{
+    &-picture{
         position:relative;
         width:80%;
         height:auto;
@@ -96,7 +106,7 @@
             transform:translateX(-50%) translateY(-50%) scaleX(1.0) scaleY(1.0);
             transition:all 0.2s ease;
         }
-        .content_cell_with_picture-view_more{
+        &-view_more{
             position:absolute;
             top:0px;
             left:0px;
@@ -120,16 +130,7 @@
     }
     &:hover{
         .content_cell_with_picture-border{
-            &-left{
-                height:100%;
-            }
-            &-top{
-                width:100%;
-            }
-            &-right{
-                height:100%;
-            }
-            &-bottom{
+            &:after{
                 height:100%;
             }
         }
@@ -137,7 +138,7 @@
             img{
                 transform:translateX(-50%) translateY(-50%) scaleX(1.2) scaleY(1.2);
             }
-            .content_cell_with_picture-view_more{
+            &-view_more{
                 background-color:rgba(0,0,0,0.6);
                 p{
                     top:50%;
@@ -147,7 +148,7 @@
             }
         }
     }
-    .content_cell_with_picture-title{
+    &-title{
         position:relative;
         width:100%;
         height:auto;
@@ -169,7 +170,7 @@
         width:90%;
         margin-left:0px;
         margin-right:0px;
-        .content_cell_with_picture-title{
+        &-title{
             p{
                 font-size:30px;
             }
@@ -181,7 +182,7 @@
         width:30%;
         margin-left:10px;
         margin-right:10px;
-        .content_cell_with_picture-title{
+        &-title{
             p{
                 font-size:25px;
             }
