@@ -20,19 +20,19 @@
                 <ContentCellWithPicture
                     v-bind:image="{
                         src:image_jizi,
-                        alt:'jizi Welcome Site'
+                        alt:'JIZI Welcome Site'
                     }"
                     v-bind:linkURL="'https://jizi.jp/'">
-                    <p class="p_with_outerlink">jizi Welcome Site&nbsp;</p>
+                    <p class="p_with_outerlink">JIZI Welcome Site&nbsp;</p>
                 </ContentCellWithPicture>
 
                 <ContentCellWithPicture
                     v-bind:image="{
                         src:image_mascot,
-                        alt:'jizi Mascot Site'
+                        alt:'JIZI Mascot Site'
                     }"
                     v-bind:linkURL="'https://mascot.koudaisai.jp/'">
-                    <p class="p_with_outerlink">jizi Mascot Site&nbsp;</p>
+                    <p class="p_with_outerlink">JIZI Mascot Site&nbsp;</p>
                 </ContentCellWithPicture>
             </div>
 		</MainBodyContent>
