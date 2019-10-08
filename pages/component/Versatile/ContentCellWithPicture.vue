@@ -15,6 +15,7 @@
         <div class="content_cell_with_picture-title">
             <slot></slot>
         </div>
+        <a class="content_cell_with_picture-link" :href="linkURL"></a>
     </div>
 </template>
 
@@ -170,6 +171,14 @@
             }
         }
     }
+    &-link{
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        opacity:0;
+    }
 }
 @media screen and (max-width: 780px){
     .content_cell_with_picture{
@@ -201,6 +210,7 @@
     export default {
         name: "ContentCellWithPicture",
         props: {
+            linkURL:String,
             image:Object,
         },
     };

@@ -11,7 +11,8 @@
                     v-bind:image="{
                         src:image_koudaisai,
                         alt:'Tokyo Tech Fest 2018 Official Site'
-                    }">
+                    }"
+                    v-bind:linkURL="'https://2018.koudaisai.jp/'">
                     <p>Tokyo Tech Fest 2018</p>
                     <p class="p_with_outerlink">Official Site&nbsp;</p>
                 </ContentCellWithPicture>
