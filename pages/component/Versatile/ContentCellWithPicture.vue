@@ -1,5 +1,11 @@
 <template>
     <div class="content_cell_with_picture">
+        <div class="content_cell_with_picture-border">
+            <span class="content_cell_with_picture-border-left"></span>
+            <span class="content_cell_with_picture-border-top"></span>
+            <span class="content_cell_with_picture-border-right"></span>
+            <span class="content_cell_with_picture-border-bottom"></span>
+        </div>
         <div class="content_cell_with_picture-picture">
             <img :src="image.src" :alt="image.alt"/>
             <div class="content_cell_with_picture-view_more">
@@ -25,6 +31,43 @@
     flex-direction:column;
     justify-content: center;/*水平方向*/
     align-items:center;/*垂直方向*/
+    .content_cell_with_picture-border{
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        background-color:rgba(0,0,0,0);
+        span{
+            position:absolute;
+            background-color:$color_white;
+            transition:all 0.2s ease;
+        }
+        &-left{
+            width:1px;
+            height:100%;
+            top:0%;
+            left:0%;
+        }
+        &-top{
+            width:100%;
+            height:1px;
+            top:0%;
+            left:0%;
+        }
+        &-right{
+            width:1px;
+            height:100%;
+            bottom:0%;
+            right:0%;
+        }
+        &-bottom{
+            width:100%;
+            height:1px;
+            bottom:0%;
+            right:0%;
+        }
+    }
     .content_cell_with_picture-picture{
         position:relative;
         width:80%;
@@ -33,6 +76,7 @@
         font-size:30px;
         transition:all 0.15s ease;
         overflow:hidden;
+        margin-top:20px;
         &:before{/*この要素のアスペクト比を固定する*/
             content:'';
             display:block;
@@ -70,11 +114,25 @@
                 color:rgba(255,255,255,0);
                 transform:translateX(-50%) translateY(-50%);
                 transition:all 0.2s ease;
-                text-align:center
+                text-align:center;
             }
         }
     }
     &:hover{
+        .content_cell_with_picture-border{
+            &-left{
+                height:100%;
+            }
+            &-top{
+                width:100%;
+            }
+            &-right{
+                height:100%;
+            }
+            &-bottom{
+                height:100%;
+            }
+        }
         .content_cell_with_picture-picture{
             img{
                 transform:translateX(-50%) translateY(-50%) scaleX(1.2) scaleY(1.2);
@@ -93,6 +151,7 @@
         position:relative;
         width:100%;
         height:auto;
+        margin-bottom:20px;
 
         display:flex;
         flex-direction:column;
