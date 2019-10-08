@@ -6,7 +6,6 @@
             <li @click="CloseMenu();"><p>ABOUT</p><router-link to="/about"></router-link></li>
             <li @click="CloseMenu();"><p>WORKS</p><router-link to="/works"></router-link></li>
         </ul>
-        <div class="touch_prevention"></div>
         <a href="/" class="top_link">
             <p>zassou's</p>
             <p>atelier</p>
@@ -85,7 +84,6 @@
 
     @media screen and (min-width: 681px){
         ul.navigation_sp{display:none;}
-        .touch_prevention{ display:none; }
         .hamburger{ display:none; }
         .navigation_pc{
             display:inline;
@@ -191,7 +189,7 @@
 
     @media screen and (max-width: 680px){
         ul.navigation_sp{
-            display:inline;
+            visibility:hidden;
             position:fixed;
             top:0px;
             left:0px;
@@ -226,16 +224,6 @@
                     color:$color_black;
                 }
             }
-        }
-
-        .touch_prevention{
-            position:fixed;
-            width:100%;
-            height:100%;
-            top:0px;
-            left:0px;
-            opacity:0;
-            display:inline;
         }
 
         .hamburger{
@@ -292,13 +280,11 @@
             color:$color_black;
         }
         #menu_checkbox:checked ~ ul.navigation_sp{
+            visibility:visible;
             opacity:1;
             li{
                 margin-top:40px;
             }
-        }
-        #menu_checkbox:checked ~ .touch_prevention{
-            display:none;
         }
         #menu_checkbox:checked ~ .hamburger{
             .bars{
