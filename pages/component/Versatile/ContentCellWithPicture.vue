@@ -133,6 +133,7 @@
         position:relative;
         width:100%;
         height:auto;
+        min-height:74px;
         margin-bottom:20px;
 
         display:flex;
