@@ -70,6 +70,7 @@
                 color:rgba(255,255,255,0);
                 transform:translateX(-50%) translateY(-50%);
                 transition:all 0.2s ease;
+                text-align:center
             }
         }
     }
