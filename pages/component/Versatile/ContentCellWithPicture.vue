@@ -128,6 +128,23 @@
             }
         }
     }
+    &-title{
+        position:relative;
+        width:100%;
+        height:auto;
+        margin-bottom:20px;
+
+        display:flex;
+        flex-direction:column;
+        justify-content: center;/*水平方向*/
+        align-items:center;/*垂直方向*/
+        p{
+            color:$color_white;
+            font-size:25px;
+            text-align: center;
+            transition:all 0.2s ease;
+        }
+    }
     &:hover{
         .content_cell_with_picture-border{
             &:after{
@@ -147,21 +164,10 @@
                 }
             }
         }
-    }
-    &-title{
-        position:relative;
-        width:100%;
-        height:auto;
-        margin-bottom:20px;
-
-        display:flex;
-        flex-direction:column;
-        justify-content: center;/*水平方向*/
-        align-items:center;/*垂直方向*/
-        p{
-            color:$color_white;
-            font-size:25px;
-            text-align: center;
+        .content_cell_with_picture-title{
+            p{
+                color:$color_black;
+            }
         }
     }
 }
