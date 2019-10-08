@@ -2,6 +2,9 @@
     <div class="content_cell_with_picture">
         <div class="content_cell_with_picture-picture">
             <img :src="image.src" :alt="image.alt"/>
+            <div class="content_cell_with_picture-view_more">
+                <p>VIEW MORE</p>
+            </div>
         </div>
         <div class="content_cell_with_picture-title">
             <slot></slot>
@@ -49,21 +52,39 @@
             transform:translateX(-50%) translateY(-50%) scaleX(1.0) scaleY(1.0);
             transition:all 0.2s ease;
         }
+        .content_cell_with_picture-view_more{
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:100%;
+            height:100%;
+            background-color:rgba(0,0,0,0);
+            transition:all 0.2s ease;
+            p{
+                position:absolute;
+                width:100%;
+                height:auto;
+                top:70%;
+                left:50%;
+                font-size:30px;
+                color:rgba(255,255,255,0);
+                transform:translateX(-50%) translateY(-50%);
+                transition:all 0.2s ease;
+            }
+        }
     }
     &:hover{
         .content_cell_with_picture-picture{
             img{
-                position:absolute;
-                top:50%;
-                left:50%;
-                width:100%;
-                height:auto;
-                min-width:100%;
-                min-height:100%;
-                max-width:inherit;
-                background-size:cover;
-                transform:translateX(-50%) translateY(-50%);
                 transform:translateX(-50%) translateY(-50%) scaleX(1.2) scaleY(1.2);
+            }
+            .content_cell_with_picture-view_more{
+                background-color:rgba(0,0,0,0.6);
+                p{
+                    top:50%;
+                    left:50%;
+                    color:rgba(255,255,255,1);
+                }
             }
         }
     }
