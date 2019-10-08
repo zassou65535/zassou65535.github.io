@@ -34,6 +34,15 @@
                     v-bind:linkURL="'https://mascot.koudaisai.jp/'">
                     <p class="p_with_outerlink">JIZI Mascot Site&nbsp;</p>
                 </ContentCellWithPicture>
+
+                <ContentCellWithPicture
+                    v-bind:image="{
+                        src:image_serpent,
+                        alt:'Serpent'
+                    }"
+                    v-bind:linkURL="'https://mascot.koudaisai.jp/'">
+                    <p>Serpent</p>
+                </ContentCellWithPicture>
             </div>
 		</MainBodyContent>
 	</div>
@@ -48,6 +57,7 @@ import ContentCellWithPicture from "./component/Versatile/ContentCellWithPicture
 import image_koudaisai from '~/assets/img/koudaisai2018.png';
 import image_jizi from '~/assets/img/jizi.png';
 import image_mascot from '~/assets/img/mascot.png';
+import image_serpent from '~/assets/img/serpent.png';
 
 export default {
     name: "works",
@@ -65,6 +75,7 @@ export default {
             image_koudaisai:image_koudaisai,
             image_jizi:image_jizi,
             image_mascot:image_mascot,
+            image_serpent:image_serpent,
         }
     }
 };
