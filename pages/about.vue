@@ -16,7 +16,7 @@
 			<WrapperWithTitle>
 				<template v-slot:title><p>likes</p></template>
 				<template v-slot:content>
-					<p>CTF(Capture The Flag)</p>
+					<p>CTF{Capture_The_Flag}</p>
 					<p>Unity</p>
 					<p>Blender</p>
 					<p>Sass</p>
