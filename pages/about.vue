@@ -17,8 +17,8 @@
 				<template v-slot:title><p>likes</p></template>
 				<template v-slot:content>
 					<p>CTF(Capture The Flag)</p>
-					<p>Creating Game</p>
-					<p>Linux</p>
+					<p>Unity</p>
+					<p>Blender</p>
 					<p>Splatoon</p>
 				</template>
 			</WrapperWithTitle>
