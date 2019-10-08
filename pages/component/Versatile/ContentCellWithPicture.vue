@@ -41,17 +41,30 @@
             position:absolute;
             top:50%;
             left:50%;
-            width:100%;
+            width:104%;
             height:auto;
-            min-width:100%;
             min-height:100%;
             max-width:inherit;
             background-size:cover;
-            transform:translateX(-50%) translateY(-50%);
+            transform:translateX(-50%) translateY(-50%) scaleX(1.0) scaleY(1.0);
+            transition:all 0.2s ease;
         }
     }
     &:hover{
         .content_cell_with_picture-picture{
+            img{
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:100%;
+                height:auto;
+                min-width:100%;
+                min-height:100%;
+                max-width:inherit;
+                background-size:cover;
+                transform:translateX(-50%) translateY(-50%);
+                transform:translateX(-50%) translateY(-50%) scaleX(1.2) scaleY(1.2);
+            }
         }
     }
     .content_cell_with_picture-title{
