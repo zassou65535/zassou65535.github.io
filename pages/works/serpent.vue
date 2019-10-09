@@ -10,7 +10,7 @@
             </WrapperWithTitle>
             <div class="works_contents_wrapper">
                 <div class="works_contents_wrapper-video_wrapper">
-                    <iframe src="https://www.youtube.com/embed/qk_lDP_ln-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/mSqe-wVHDe0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
 		</MainBodyContent>
@@ -51,7 +51,7 @@ export default {
         iframe{
             position:relative;
             width:100%;
-            height:auto;
+            height:59vw;
         }
     }
 }
