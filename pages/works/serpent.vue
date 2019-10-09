@@ -4,7 +4,7 @@
 		<MainBodyContent>
             <WrapperWithTitle>
                 <template v-slot:title><p>Introduction</p></template>
-                <template v-slot:content><p></p></template>
+                <template v-slot:content><p> BlenderとUnityで都市をイメージしたステージを作りました。以下はその紹介動画です。</p></template>
             </WrapperWithTitle>
             <div class="works_contents_wrapper">
             </div>

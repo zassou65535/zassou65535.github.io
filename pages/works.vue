@@ -1,54 +1,57 @@
 <template>
 	<div>
-		<PageTitle>WORKS</PageTitle>
-		<MainBodyContent>
-            <WrapperWithTitle>
-                <template v-slot:title><p>Works</p></template>
-                <template v-slot:content><p></p></template>
-            </WrapperWithTitle>
-            <div class="works_contents_wrapper">
-                <ContentCellWithPicture
-                    v-bind:image="{
-                        src:image_koudaisai,
-                        alt:'Tokyo Tech Fest 2018 Official Site'
-                    }"
-                    v-bind:linkURL="'https://2018.koudaisai.jp/'"
-                    v-bind:isInternalLink="false">
-                    <p>Tokyo Tech Fest 2018</p>
-                    <p class="p_with_outerlink">Official Site&nbsp;</p>
-                </ContentCellWithPicture>
+        <template v-if="isThisPageWorks">
+    		<PageTitle>WORKS</PageTitle>
+    		<MainBodyContent>
+                <WrapperWithTitle>
+                    <template v-slot:title><p>Works</p></template>
+                    <template v-slot:content><p></p></template>
+                </WrapperWithTitle>
+                <div class="works_contents_wrapper">
+                    <ContentCellWithPicture
+                        v-bind:image="{
+                            src:image_koudaisai,
+                            alt:'Tokyo Tech Fest 2018 Official Site'
+                        }"
+                        v-bind:linkURL="'https://2018.koudaisai.jp/'"
+                        v-bind:isInternalLink="false">
+                        <p>Tokyo Tech Fest 2018</p>
+                        <p class="p_with_outerlink">Official Site&nbsp;</p>
+                    </ContentCellWithPicture>
 
-                <ContentCellWithPicture
-                    v-bind:image="{
-                        src:image_jizi,
-                        alt:'JIZI Welcome Site'
-                    }"
-                    v-bind:linkURL="'https://jizi.jp/'"
-                    v-bind:isInternalLink="false">
-                    <p class="p_with_outerlink">JIZI Welcome Site&nbsp;</p>
-                </ContentCellWithPicture>
+                    <ContentCellWithPicture
+                        v-bind:image="{
+                            src:image_jizi,
+                            alt:'JIZI Welcome Site'
+                        }"
+                        v-bind:linkURL="'https://jizi.jp/'"
+                        v-bind:isInternalLink="false">
+                        <p class="p_with_outerlink">JIZI Welcome Site&nbsp;</p>
+                    </ContentCellWithPicture>
 
-                <ContentCellWithPicture
-                    v-bind:image="{
-                        src:image_mascot,
-                        alt:'JIZI Mascot Site'
-                    }"
-                    v-bind:linkURL="'https://mascot.koudaisai.jp/'"
-                    v-bind:isInternalLink="false">
-                    <p class="p_with_outerlink">JIZI Mascot Site&nbsp;</p>
-                </ContentCellWithPicture>
+                    <ContentCellWithPicture
+                        v-bind:image="{
+                            src:image_mascot,
+                            alt:'JIZI Mascot Site'
+                        }"
+                        v-bind:linkURL="'https://mascot.koudaisai.jp/'"
+                        v-bind:isInternalLink="false">
+                        <p class="p_with_outerlink">JIZI Mascot Site&nbsp;</p>
+                    </ContentCellWithPicture>
 
-                <ContentCellWithPicture
-                    v-bind:image="{
-                        src:image_serpent,
-                        alt:'Serpent'
-                    }"
-                    v-bind:linkURL="'/about'"
-                    v-bind:isInternalLink="true">
-                    <p>Serpent</p>
-                </ContentCellWithPicture>
-            </div>
-		</MainBodyContent>
+                    <ContentCellWithPicture
+                        v-bind:image="{
+                            src:image_serpent,
+                            alt:'Serpent'
+                        }"
+                        v-bind:linkURL="'/works/serpent'"
+                        v-bind:isInternalLink="true">
+                        <p>Serpent</p>
+                    </ContentCellWithPicture>
+                </div>
+    		</MainBodyContent>
+        </template>
+        <nuxt-child></nuxt-child>
 	</div>
 </template>
 
@@ -81,7 +84,12 @@ export default {
             image_mascot:image_mascot,
             image_serpent:image_serpent,
         }
-    }
+    },
+    computed:{
+        isThisPageWorks:function(){
+            return this.$route.name==='works';
+        }
+    },
 };
 </script>
 
