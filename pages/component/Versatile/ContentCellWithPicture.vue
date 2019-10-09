@@ -15,7 +15,8 @@
         <div class="content_cell_with_picture-title">
             <slot></slot>
         </div>
-        <a class="content_cell_with_picture-link" :href="linkURL"></a>
+        <router-link v-if="isInternalLink" class="content_cell_with_picture-link" :to="linkURL"></router-link>
+        <a v-else class="content_cell_with_picture-link" :href="linkURL"></a>
     </div>
 </template>
 
@@ -213,6 +214,7 @@
         props: {
             linkURL:String,
             image:Object,
+            isInternalLink:Boolean,//内部リンクかどうか
         },
     };
 </script>
