@@ -9,6 +9,9 @@
                 </template>
             </WrapperWithTitle>
             <div class="works_contents_wrapper">
+                <video controls v-bind:src="serpentintroduce">
+                    <p>動画の読み込みに失敗しました。</p>
+                </video>
             </div>
 		</MainBodyContent>
 	</div>
@@ -18,7 +21,8 @@
 import PageTitle from "../component/Versatile/PageTitle.vue"
 import MainBodyContent from "../component/Versatile/MainBodyContent.vue"
 import WrapperWithTitle from "../component/Versatile/WrapperWithTitle.vue"
-import ContentCellWithPicture from "../component/Versatile/ContentCellWithPicture.vue"
+
+import serpentintroduce from '~/assets/video/serpentintroduce.mp4';
 
 export default {
     name: "serpent",
@@ -27,9 +31,11 @@ export default {
     	PageTitle,
     	MainBodyContent,
         WrapperWithTitle,
-        ContentCellWithPicture,
     },
-    props: {
+    data(){
+        return{
+            serpentintroduce:serpentintroduce,
+        }
     },
 };
 </script>
@@ -45,6 +51,12 @@ export default {
     flex-wrap:wrap;
     justify-content: center;/*水平方向*/
     align-items:flex-start;/*垂直方向*/
+    video{
+        position:relative;
+        width:100%;
+        height:auto;
+        border:solid 1px $color_white;
+    }
 }
 </style>
 
