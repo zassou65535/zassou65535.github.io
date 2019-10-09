@@ -9,9 +9,9 @@
                 </template>
             </WrapperWithTitle>
             <div class="works_contents_wrapper">
-                <video controls v-bind:src="serpentintroduce">
-                    <p>動画の読み込みに失敗しました。</p>
-                </video>
+                <div class="works_contents_wrapper-video_wrapper">
+                    <iframe src="https://www.youtube.com/embed/qk_lDP_ln-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
 		</MainBodyContent>
 	</div>
@@ -21,9 +21,6 @@
 import PageTitle from "../component/Versatile/PageTitle.vue"
 import MainBodyContent from "../component/Versatile/MainBodyContent.vue"
 import WrapperWithTitle from "../component/Versatile/WrapperWithTitle.vue"
-
-import serpentintroduce from '~/assets/video/serpentintroduce.mp4';
-
 export default {
     name: "serpent",
     layout:"pageLayout",
@@ -31,11 +28,6 @@ export default {
     	PageTitle,
     	MainBodyContent,
         WrapperWithTitle,
-    },
-    data(){
-        return{
-            serpentintroduce:serpentintroduce,
-        }
     },
 };
 </script>
@@ -51,11 +43,16 @@ export default {
     flex-wrap:wrap;
     justify-content: center;/*水平方向*/
     align-items:flex-start;/*垂直方向*/
-    video{
+    &-video_wrapper{
         position:relative;
         width:100%;
         height:auto;
         border:solid 1px $color_white;
+        iframe{
+            position:relative;
+            width:100%;
+            height:auto;
+        }
     }
 }
 </style>
