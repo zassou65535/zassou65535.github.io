@@ -1,22 +1,24 @@
 <template>
     <div class="content_cell_with_picture">
-        <div class="content_cell_with_picture-border">
-            <span class="content_cell_with_picture-border-left"></span>
-            <span class="content_cell_with_picture-border-top"></span>
-            <span class="content_cell_with_picture-border-right"></span>
-            <span class="content_cell_with_picture-border-bottom"></span>
-        </div>
-        <div class="content_cell_with_picture-picture">
-            <img :src="image.src" :alt="image.alt"/>
-            <div class="content_cell_with_picture-picture-view_more">
-                <p>VIEW MORE</p>
+        <template v-if="image!=null">
+            <div class="content_cell_with_picture-border">
+                <span class="content_cell_with_picture-border-left"></span>
+                <span class="content_cell_with_picture-border-top"></span>
+                <span class="content_cell_with_picture-border-right"></span>
+                <span class="content_cell_with_picture-border-bottom"></span>
             </div>
-        </div>
-        <div class="content_cell_with_picture-title">
-            <slot></slot>
-        </div>
-        <router-link v-if="isInternalLink" class="content_cell_with_picture-link" :to="linkURL"></router-link>
-        <a v-else class="content_cell_with_picture-link" :href="linkURL"></a>
+            <div class="content_cell_with_picture-picture">
+                <img :src="image.src" :alt="image.alt"/>
+                <div class="content_cell_with_picture-picture-view_more">
+                    <p>VIEW MORE</p>
+                </div>
+            </div>
+            <div class="content_cell_with_picture-title">
+                <slot></slot>
+            </div>
+            <router-link v-if="isInternalLink" class="content_cell_with_picture-link" :to="linkURL"></router-link>
+            <a v-else class="content_cell_with_picture-link" :href="linkURL"></a>
+        </template>
     </div>
 </template>
 

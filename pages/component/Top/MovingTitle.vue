@@ -1,12 +1,14 @@
 <template>
     <div class="movingtitle_wrapper">
-        <div class="line" v-for="index_line in titleStrings.length">
-            <div 
-             v-bind:class="'each_character emerge_char'+(titleStrings[index_line-1][1]+index_char-1)"
-             v-for="index_char in titleStrings[index_line-1][0].length">
-                {{titleStrings[index_line-1][0][index_char-1]}}
+        <template v-if="titleStrings!=null">
+            <div class="line" v-for="index_line in titleStrings.length">
+                <div 
+                 v-bind:class="'each_character emerge_char'+(titleStrings[index_line-1][1]+index_char-1)"
+                 v-for="index_char in titleStrings[index_line-1][0].length">
+                    {{titleStrings[index_line-1][0][index_char-1]}}
+                </div>
             </div>
-        </div>
+        </template>
     </div>
 </template>
 
