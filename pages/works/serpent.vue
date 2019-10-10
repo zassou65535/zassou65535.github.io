@@ -48,9 +48,16 @@ export default {
         width:100%;
         height:auto;
         border:solid 1px $color_white;
+        background-color:rgba(0,0,0,1);
+
+        display: flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content: center;/*水平方向*/
+        align-items:center;/*垂直方向*/
         iframe{
             position:relative;
-            width:100%;
+            width:99%;
             height:59vw;
         }
     }
