@@ -47,6 +47,9 @@ export default {
   */
   modules: [
     '@nuxtjs/style-resources',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-149745300-1'
+    }]
   ],
   styleResources: {
     scss: [
