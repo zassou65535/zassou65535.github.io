@@ -69,6 +69,14 @@ export default {
       return { x: 0, y: 0 }
     }
   },
+  generate: {
+    routes: [
+      '/',
+      '/about',
+      '/works',
+      '/works/serpent',
+    ]
+  },
   /*
   ** Build configuration
   */
