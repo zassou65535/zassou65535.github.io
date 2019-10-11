@@ -72,9 +72,9 @@ export default {
   generate: {
     routes: [
       '/',
-      '/about/',
-      '/works/',
-      '/works/serpent/',
+      '/about',
+      '/works',
+      '/works/serpent',
     ]
   },
   /*
