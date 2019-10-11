@@ -22,8 +22,8 @@ export default {
       { hid: 'twitter:card', name: 'twitter:card', content: "summary" },
       { hid: 'og:title', property: 'og:title', content: "zassou's atelier"},
       { hid: 'og:url', property: 'og:url', content: "https://zassou65535.github.io/"},
-      { hid: 'og:description', property: 'og:description', content: "Collection of works" },
-      { hid: 'og:image', property: 'og:image', content: "./assets/img/image.png" },
+      { hid: 'og:description', property: 'og:description', content: "zassou's collection of works" },
+      { hid: 'og:image', property: 'og:image', content: "~assets/img/image.png" },
       { hid: 'og:site_name', name: 'og:site_name', content: "zassou's atelier" }
     ],
     link: [
