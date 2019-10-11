@@ -210,6 +210,7 @@
                 list-style: none;
                 margin-top:70px;
                 transition:all 0.2s ease;
+                width:100%;
                 a{
                     text-decoration:none;
                     background-color:rgba(0,0,0,0);
