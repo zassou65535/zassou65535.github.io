@@ -17,7 +17,14 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: "zassous_atelier" || '' }
+      { hid: 'description', name: 'description', content: "zassous_atelier" || '' },
+
+      { hid: 'twitter:card', name: 'twitter:card', content: "summary" },
+      { hid: 'og:title', property: 'og:title', content: "zassou's atelier"},
+      { hid: 'og:url', property: 'og:url', content: "https://zassou65535.github.io/"},
+      { hid: 'og:description', property: 'og:description', content: "Collection of works" },
+      { hid: 'og:image', property: 'og:image', content: "./assets/img/image.png" },
+      { hid: 'og:site_name', name: 'og:site_name', content: "zassou's atelier" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
