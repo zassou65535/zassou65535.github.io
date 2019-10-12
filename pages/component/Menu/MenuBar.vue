@@ -258,6 +258,7 @@
                     border-radius:2px;
                     transition:all 0.2s ease;
                     transform:rotateZ(0deg);
+                    -webkit-transform:rotateZ(0deg);
                 }
                 .bar_middle{
                     margin-top:15px;
@@ -294,12 +295,15 @@
                 }
                 .bar_top{
                     transform:translateY(17px) rotateZ(135deg);
+                    -webkit-transform:translateY(17px) rotateZ(135deg);
                 }
                 .bar_middle{
                     transform:rotateZ(45deg);
+                    -webkit-transform:rotateZ(45deg);
                 }
                 .bar_bottom{
                     transform:translateY(-17px) rotateZ(225deg);
+                    -webkit-transform:translateY(-17px) rotateZ(225deg);
                 }
             }
             p{
