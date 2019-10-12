@@ -37,7 +37,7 @@ $wait_duration:-0.3s; //ある文字が出現してから、次の文字の出�
         display: flex;
         flex-direction:row;
         justify-content: center;/*水平方向*/
-        align-items:center center;/*垂直方向*/
+        align-items:center;/*垂直方向*/
         .each_character{
             position:relative;
             font-size:80px;
