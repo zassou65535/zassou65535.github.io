@@ -15,6 +15,8 @@
                 <span class="bar_top"></span>
                 <span class="bar_middle"></span>
                 <span class="bar_bottom"></span>
+                <span class="bar_cross1"></span>
+                <span class="bar_cross2"></span>
             </div>
             <p>
                 <span>M</span>
@@ -263,6 +265,25 @@
                     margin-top:14px;
                     margin-bottom:14px;
                 }
+                .bar_cross1{
+                    position:absolute;
+                    margin:0;
+                    top:14px;
+                    left:0px;
+                    transform:rotateZ(0deg);
+                    opacity: 0;
+                    transition:all 0.2s ease;
+                }
+                .bar_cross2{
+                    position:absolute;
+                    margin:0;
+                    top:14px;
+                    left:0px;
+                    transform:rotateZ(0deg);
+                    opacity: 0;
+                    background-color: rgba(0,0,0,0);
+                    transition:all 0.2s ease;
+                }
             }
             p{
                 display: flex;
@@ -293,14 +314,24 @@
                     background-color: $color_black;
                 }
                 .bar_top{
+                    opacity:0;
                     transform:translateY(16px) rotateZ(135deg);
                 }
                 .bar_middle{
-                    transform:rotateZ(45deg);
+                    opacity:0;
+                    transform:rotateZ(225deg);
                 }
                 .bar_bottom{
                     opacity:0;
                     transform:translateY(-16px) rotateZ(225deg);
+                }
+                .bar_cross1{
+                    transform:rotateZ(135deg);
+                    opacity:1;
+                }
+                .bar_cross2{
+                    transform:rotateZ(225deg);
+                    opacity:1;
                 }
             }
             p{
