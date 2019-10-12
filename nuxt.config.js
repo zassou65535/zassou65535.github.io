@@ -57,7 +57,8 @@ export default {
     '@nuxtjs/style-resources',
     ['@nuxtjs/google-analytics', {
       id: 'UA-149745300-1'
-    }]
+    }],
+    '@nuxtjs/sitemap',
   ],
   styleResources: {
     scss: [
