@@ -60,7 +60,12 @@
         },
         methods:{
             RisizeEvent:function(){
-                this.DrawBackGround();
+                if (!process.client) {
+                  return;
+                }
+                if(this.content_width<window.innerWidth || this.content_height<window.innerHeight){
+                    this.DrawBackGround();
+                }
             },
             DrawBackGround:function(){
                 if (!process.client) {
