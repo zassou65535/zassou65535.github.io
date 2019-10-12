@@ -299,6 +299,7 @@
                     transform:rotateZ(45deg);
                 }
                 .bar_bottom{
+                    opacity:0;
                     transform:translateY(-16px) rotateZ(225deg);
                 }
             }
