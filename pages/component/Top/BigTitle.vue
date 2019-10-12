@@ -57,7 +57,7 @@ $wait_subtitle_emerge:0.3s;//背景が透過し終わってから、副題を表
             background-color:rgba(0,0,0,1);
         }
         .bigline{
-            position:rerative;
+            position:relative;
             width:100%;
             height:auto;
         }
