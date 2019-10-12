@@ -260,8 +260,8 @@
                     transform:rotateZ(0deg);
                 }
                 .bar_middle{
-                    margin-top:15px;
-                    margin-bottom:15px;
+                    margin-top:14px;
+                    margin-bottom:14px;
                 }
             }
             p{
@@ -293,13 +293,13 @@
                     background-color: $color_black;
                 }
                 .bar_top{
-                    transform:translateY(17px) rotateZ(135deg);
+                    transform:translateY(16px) rotateZ(135deg);
                 }
                 .bar_middle{
                     transform:rotateZ(45deg);
                 }
                 .bar_bottom{
-                    transform:translateY(-17px) rotateZ(225deg);
+                    transform:translateY(-16px) rotateZ(225deg);
                 }
             }
             p{
