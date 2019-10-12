@@ -79,6 +79,9 @@ export default {
       '/works/serpent',
     ]
   },
+  sitemap:{
+    hostname:'https://zassou65535.github.io',
+  },
   /*
   ** Build configuration
   */
