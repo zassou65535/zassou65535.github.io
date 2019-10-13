@@ -26,7 +26,8 @@
 			<WrapperWithTitle>
 				<template v-slot:title><p>Contact</p></template>
 				<template v-slot:content>
-					<a class="a_green" href="https://github.com/zassou65535"><p class="p_with_outerlink">GitHub</p></a>
+					<a class="a_green" href="https://github.com/zassou65535"><p class="p_with_outerlink">GitHub&nbsp;</p></a>
+					<a class="a_green" href="https://twitter.com/zassouEX"><p class="p_with_outerlink">twitter&nbsp;</p></a>
 				</template>
 			</WrapperWithTitle>
 		</MainBodyContent>
