@@ -14,13 +14,19 @@
 				</template>
 			</WrapperWithTitle>
 			<WrapperWithTitle>
-				<template v-slot:title><p>likes</p></template>
+				<template v-slot:title><p>Likes</p></template>
 				<template v-slot:content>
 					<p>CTF{Capture_The_Flag}</p>
 					<p>Unity</p>
 					<p>Blender</p>
 					<p>Sass</p>
 					<p>Splatoon</p>
+				</template>
+			</WrapperWithTitle>
+			<WrapperWithTitle>
+				<template v-slot:title><p>Contact</p></template>
+				<template v-slot:content>
+					<a class="a_green" href="https://github.com/zassou65535"><p class="p_with_outerlink">GitHub</p></a>
 				</template>
 			</WrapperWithTitle>
 		</MainBodyContent>
