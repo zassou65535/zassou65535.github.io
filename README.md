@@ -20,3 +20,6 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+##reference
+https://codepen.io/jackrugile/pen/gaFub?editors=0110
