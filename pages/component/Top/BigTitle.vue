@@ -23,7 +23,7 @@ $wait_subtitle_emerge:0.3s;//背景が透過し終わってから、副題を表
     left:0px;
     background-color:rgba(0,0,0,0);
     .background_black{
-        position:absolute;
+        position:fixed;
         width:100%;
         height:100%;
         top:0px;
