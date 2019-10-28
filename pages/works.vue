@@ -4,7 +4,7 @@
     		<PageTitle>WORKS</PageTitle>
     		<MainBodyContent>
                 <WrapperWithTitle>
-                    <template v-slot:title><p>Works</p></template>
+                    <template v-slot:title><p>Team collaborations</p></template>
                     <template v-slot:content><p></p></template>
                 </WrapperWithTitle>
                 <div class="works_contents_wrapper">
@@ -38,7 +38,12 @@
                         v-bind:isInternalLink="false">
                         <p class="p_with_outerlink">JIZI Mascot Site&nbsp;</p>
                     </ContentCellWithPicture>
-
+                </div>
+                <WrapperWithTitle>
+                    <template v-slot:title><p>personal works</p></template>
+                    <template v-slot:content><p></p></template>
+                </WrapperWithTitle>
+                <div class="works_contents_wrapper">
                     <ContentCellWithPicture
                         v-bind:image="{
                             src:image_serpent,
