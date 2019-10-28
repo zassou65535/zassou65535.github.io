@@ -4,7 +4,7 @@
     		<PageTitle>WORKS</PageTitle>
     		<MainBodyContent>
                 <WrapperWithTitle>
-                    <template v-slot:title><p>Team collaborations</p></template>
+                    <template v-slot:title><p>Joint works</p></template>
                     <template v-slot:content><p></p></template>
                 </WrapperWithTitle>
                 <div class="works_contents_wrapper">
