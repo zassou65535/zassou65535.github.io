@@ -11,7 +11,7 @@
 </template>
 
 <style scoped lang="scss">
-$wait_background_clear:1.2s;//ページが表示されてから、背景を透過し始めるまでの時間
+$wait_background_clear:1.5s;//ページが表示されてから、背景を透過し始めるまでの時間
 $duration_background_clear:0.3s;//背景を透過するのにかける時間
 $wait_subtitle_emerge:0.3s;//背景が透過し終わってから、副題を表示し始めるまでの時間
 

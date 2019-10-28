@@ -13,6 +13,7 @@
 </template>
 
 <style scoped lang="scss">
+$wait_time:0.3s; //最初の文字の出現にかかる時間
 $max_characters:20; //最大文字数
 $emerge_duration:0.35s; //文字の出現にかかる時間
 $wait_duration:-0.3s; //ある文字が出現してから、次の文字の出現にかかる時間
@@ -55,7 +56,7 @@ $wait_duration:-0.3s; //ある文字が出現してから、次の文字の出�
         animation-name:emerge_char_base;
         animation-duration:$emerge_duration;
         animation-timing-function:ease;
-        animation-delay:($emerge_duration+$wait_duration)*$i;
+        animation-delay:($emerge_duration+$wait_duration)*$i+$wait_time;
         animation-fill-mode:forwards;
     }
 }
