@@ -53,6 +53,17 @@
                         v-bind:isInternalLink="true">
                         <p>Serpent</p>
                     </ContentCellWithPicture>
+
+                    <ContentCellWithPicture
+                        v-bind:image="{
+                            src:image_melicon_generator,
+                            alt:'Mel Icon Generator'
+                        }"
+                        v-bind:linkURL="'https://qiita.com/zassou65535/items/cad3f61177880e8230ab'"
+                        v-bind:isInternalLink="false">
+                        <p>Mel Icon</p>
+                        <p class="p_with_outerlink">Generator&nbsp;</p>
+                    </ContentCellWithPicture>
                 </div>
     		</MainBodyContent>
         </template>
@@ -70,6 +81,7 @@ import image_koudaisai from '~/assets/img/koudaisai2018.png';
 import image_jizi from '~/assets/img/jizi.png';
 import image_mascot from '~/assets/img/mascot.png';
 import image_serpent from '~/assets/img/serpent.png';
+import image_melicon_generator from '~/assets/img/melicon_generator.png';
 
 export default {
     name: "works",
@@ -88,6 +100,7 @@ export default {
             image_jizi:image_jizi,
             image_mascot:image_mascot,
             image_serpent:image_serpent,
+            image_melicon_generator:image_melicon_generator,
         }
     },
     computed:{

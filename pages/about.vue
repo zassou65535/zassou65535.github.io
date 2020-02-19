@@ -16,10 +16,12 @@
 			<WrapperWithTitle>
 				<template v-slot:title><p>Likes</p></template>
 				<template v-slot:content>
+					<p>Machine learning</p>
 					<p>CTF{Capture_The_Flag}</p>
 					<p>Unity</p>
 					<p>Blender</p>
 					<p>Sass</p>
+					<p>Pokemon</p>
 					<p>Splatoon</p>
 				</template>
 			</WrapperWithTitle>
