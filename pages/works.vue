@@ -21,16 +21,6 @@
 
                     <ContentCellWithPicture
                         v-bind:image="{
-                            src:image_jizi,
-                            alt:'JIZI Welcome Site'
-                        }"
-                        v-bind:linkURL="'https://jizi.jp/'"
-                        v-bind:isInternalLink="false">
-                        <p class="p_with_outerlink">JIZI Welcome Site&nbsp;</p>
-                    </ContentCellWithPicture>
-
-                    <ContentCellWithPicture
-                        v-bind:image="{
                             src:image_mascot,
                             alt:'JIZI Mascot Site'
                         }"
@@ -78,7 +68,6 @@ import WrapperWithTitle from "./component/Versatile/WrapperWithTitle.vue"
 import ContentCellWithPicture from "./component/Versatile/ContentCellWithPicture.vue"
 
 import image_koudaisai from '~/assets/img/koudaisai2018.png';
-import image_jizi from '~/assets/img/jizi.png';
 import image_mascot from '~/assets/img/mascot.png';
 import image_serpent from '~/assets/img/serpent.png';
 import image_melicon_generator from '~/assets/img/melicon_generator.png';
@@ -97,7 +86,6 @@ export default {
     data(){
         return{
             image_koudaisai:image_koudaisai,
-            image_jizi:image_jizi,
             image_mascot:image_mascot,
             image_serpent:image_serpent,
             image_melicon_generator:image_melicon_generator,
