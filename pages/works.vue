@@ -36,12 +36,13 @@
                 <div class="works_contents_wrapper">
                     <ContentCellWithPicture
                         v-bind:image="{
-                            src:image_serpent,
-                            alt:'Serpent'
+                            src:image_melicon_generator_2,
+                            alt:'Mel Icon Generator 2'
                         }"
-                        v-bind:linkURL="'/works/serpent'"
-                        v-bind:isInternalLink="true">
-                        <p>Serpent</p>
+                        v-bind:linkURL="'https://qiita.com/zassou65535/items/57fe3bd677159cdb2528'"
+                        v-bind:isInternalLink="false">
+                        <p>Mel Icon</p>
+                        <p class="p_with_outerlink">Generator 2&nbsp;</p>
                     </ContentCellWithPicture>
 
                     <ContentCellWithPicture
@@ -53,6 +54,16 @@
                         v-bind:isInternalLink="false">
                         <p>Mel Icon</p>
                         <p class="p_with_outerlink">Generator&nbsp;</p>
+                    </ContentCellWithPicture>
+
+                    <ContentCellWithPicture
+                        v-bind:image="{
+                            src:image_serpent,
+                            alt:'Serpent'
+                        }"
+                        v-bind:linkURL="'/works/serpent'"
+                        v-bind:isInternalLink="true">
+                        <p>Serpent</p>
                     </ContentCellWithPicture>
                 </div>
     		</MainBodyContent>
@@ -69,8 +80,9 @@ import ContentCellWithPicture from "./component/Versatile/ContentCellWithPicture
 
 import image_koudaisai from '~/assets/img/koudaisai2018.png';
 import image_mascot from '~/assets/img/mascot.png';
-import image_serpent from '~/assets/img/serpent.png';
+import image_melicon_generator_2 from '~/assets/img/melicon_generator_2.png';
 import image_melicon_generator from '~/assets/img/melicon_generator.png';
+import image_serpent from '~/assets/img/serpent.png';
 
 export default {
     name: "works",
@@ -87,8 +99,9 @@ export default {
         return{
             image_koudaisai:image_koudaisai,
             image_mascot:image_mascot,
-            image_serpent:image_serpent,
+            image_melicon_generator_2:image_melicon_generator_2,
             image_melicon_generator:image_melicon_generator,
+            image_serpent:image_serpent,
         }
     },
     computed:{
