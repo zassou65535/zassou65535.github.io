@@ -80,7 +80,7 @@ import ContentCellWithPicture from "./component/Versatile/ContentCellWithPicture
 
 import image_koudaisai from '~/assets/img/koudaisai2018.png';
 import image_mascot from '~/assets/img/mascot.png';
-import image_melicon_generator_2 from '~/assets/img/melicon_generator_2.png';
+import image_melicon_generator_2 from '~/assets/img/melicon_generator_2.gif';
 import image_melicon_generator from '~/assets/img/melicon_generator.png';
 import image_serpent from '~/assets/img/serpent.png';
 
