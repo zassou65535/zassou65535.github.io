@@ -39,7 +39,7 @@
                             src:image_melicon_converter,
                             alt:'Mel Icon Converter'
                         }"
-                        v-bind:linkURL="'https://qiita.com/zassou65535/private/4bc42fa36203c13fe2d3'"
+                        v-bind:linkURL="'https://qiita.com/zassou65535/items/4bc42fa36203c13fe2d3'"
                         v-bind:isInternalLink="false">
                         <p>Mel Icon</p>
                         <p class="p_with_outerlink">Converter&nbsp;</p>
