@@ -17,12 +17,11 @@
 				<template v-slot:title><p>Likes</p></template>
 				<template v-slot:content>
 					<p>Machine learning</p>
-					<p>CTF</p>
+					<p>GAN</p>
 					<p>AtCoder</p>
 					<p>Unity</p>
 					<p>Blender</p>
-					<p>Pokemon</p>
-					<p>Splatoon</p>
+					<p>CTF(pwn)</p>
 				</template>
 			</WrapperWithTitle>
 			<WrapperWithTitle>
