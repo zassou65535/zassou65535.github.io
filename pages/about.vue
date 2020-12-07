@@ -10,7 +10,6 @@
 				<template v-slot:title><p>University</p></template>
 				<template v-slot:content>
 					<p>Tokyo Institute of Technology</p>
-					<p>Department of Information and Communications Engineering</p>
 				</template>
 			</WrapperWithTitle>
 			<WrapperWithTitle>
