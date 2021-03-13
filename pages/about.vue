@@ -17,10 +17,9 @@
 				<template v-slot:content>
 					<p>Machine learning</p>
 					<p>GAN</p>
-					<p>AtCoder</p>
 					<p>Unity</p>
 					<p>Blender</p>
-					<p>CTF(pwn)</p>
+					<p>Website creating</p>
 				</template>
 			</WrapperWithTitle>
 			<WrapperWithTitle>

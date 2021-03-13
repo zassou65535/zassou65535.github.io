@@ -69,6 +69,17 @@
 
                     <ContentCellWithPicture
                         v-bind:image="{
+                            src:image_wavegan_pokemon,
+                            alt:'Pokemon Cries Generation'
+                        }"
+                        v-bind:linkURL="'https://qiita.com/zassou65535/items/5a9d5ef44dedea94be8a'"
+                        v-bind:isInternalLink="false">
+                        <p>Pokemon Cries</p>
+                        <p class="p_with_outerlink">Generation&nbsp;</p>
+                    </ContentCellWithPicture>
+
+                    <ContentCellWithPicture
+                        v-bind:image="{
                             src:image_serpent,
                             alt:'Serpent'
                         }"
@@ -94,6 +105,7 @@ import image_mascot from '~/assets/img/mascot.png';
 import image_melicon_converter from '~/assets/img/melicon_converter.png';
 import image_melicon_generator_2 from '~/assets/img/melicon_generator_2.gif';
 import image_melicon_generator from '~/assets/img/melicon_generator.png';
+import image_wavegan_pokemon from '~/assets/img/wavegan_pokemon.png';
 import image_serpent from '~/assets/img/serpent.png';
 
 export default {
@@ -115,6 +127,7 @@ export default {
             image_melicon_generator_2:image_melicon_generator_2,
             image_melicon_generator:image_melicon_generator,
             image_serpent:image_serpent,
+            image_wavegan_pokemon:image_wavegan_pokemon,
         }
     },
     computed:{
